@@ -2,7 +2,6 @@ package com.sandeep.utilities;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 
