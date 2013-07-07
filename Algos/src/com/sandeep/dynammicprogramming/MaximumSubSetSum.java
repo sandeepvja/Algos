@@ -41,6 +41,19 @@ public class MaximumSubSetSum {
 		}
 		return maximum;
 	}
+	/*
+	 * KADANE'S ALGORITHM
+	 */
+	public int optimizedSolve(){
+		int curr_max=array[0];
+		int max_so_far = array[0];
+		
+		for(int i = 1;i<array.length;i++){
+			curr_max = Math.max(curr_max + array[i], array[i]);
+			max_so_far = Math.max(curr_max, max_so_far);
+		}
+		return max_so_far;
+	}
 	public int solve(){
 		for(int i=0;i<array.length;i++){
 			subsetSum[i] = array[i];
@@ -52,11 +65,11 @@ public class MaximumSubSetSum {
 		return findMax(subsetSum);
 	}
 	public static void main(String args[]) throws FileNotFoundException{		
-		IOUtils.redirectInput("E:\\programming\\eclipse Workspaces\\amazon interview\\DP\\inputs\\MaximumSubSetSum.txt");
+		//IOUtils.redirectInput("E:\\programming\\Git-repositories\\com.sandeep.algos\\Algos\\inputs\\MaximumSubSetSum.txt");
 		
 		MaximumSubSetSum subsetSum = new MaximumSubSetSum();
 		subsetSum.readInput();
-		int maxSum = subsetSum.solve();
+		int maxSum = subsetSum.optimizedSolve();
 		System.out.println(maxSum);
 	}
 }
