@@ -31,8 +31,7 @@ public class LongestIncreasingSubsequence implements Algorithms{
 	}
 	@Override
 	public int optimizedSolve() {
-		// TODO Auto-generated method stub
-		return 0;
+		throw new UnsupportedOperationException();		
 	}
 	@Override
 	public int solve() {
