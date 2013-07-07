@@ -15,13 +15,17 @@ import com.sandeep.utilities.IOUtils;
 * one-dimensional array of numbers which has the largest sum.
 * 
 */
-public class MaximumSubSetSum {
+public class MaximumSubSetSum implements Algorithms {
 	int array[];
 	int subsetSum[];
 	public MaximumSubSetSum(){
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see com.sandeep.dynammicprogramming.Algorithms#readInput()
+	 */
+	@Override
 	public void readInput() {
 		
 		Scanner input = new Scanner(System.in);
@@ -44,6 +48,10 @@ public class MaximumSubSetSum {
 	/*
 	 * KADANE'S ALGORITHM
 	 */
+	/* (non-Javadoc)
+	 * @see com.sandeep.dynammicprogramming.Algorithms#optimizedSolve()
+	 */
+	@Override
 	public int optimizedSolve(){
 		int curr_max=array[0];
 		int max_so_far = array[0];
@@ -54,6 +62,10 @@ public class MaximumSubSetSum {
 		}
 		return max_so_far;
 	}
+	/* (non-Javadoc)
+	 * @see com.sandeep.dynammicprogramming.Algorithms#solve()
+	 */
+	@Override
 	public int solve(){
 		for(int i=0;i<array.length;i++){
 			subsetSum[i] = array[i];
@@ -67,7 +79,7 @@ public class MaximumSubSetSum {
 	public static void main(String args[]) throws FileNotFoundException{		
 		//IOUtils.redirectInput("E:\\programming\\Git-repositories\\com.sandeep.algos\\Algos\\inputs\\MaximumSubSetSum.txt");
 		
-		MaximumSubSetSum subsetSum = new MaximumSubSetSum();
+		Algorithms subsetSum = new MaximumSubSetSum();
 		subsetSum.readInput();
 		int maxSum = subsetSum.optimizedSolve();
 		System.out.println(maxSum);
