@@ -1,8 +1,6 @@
 package com.sandeep.sorting;
 
-import com.sandeep.utilities.IOUtils;
-
-public class BubbleSort<T extends Comparable> implements Sortable<T> {
+public class BubbleSort<T extends Comparable<T>> implements Sortable<T> {
 
 	@Override
 	public void sort(T[] array) {

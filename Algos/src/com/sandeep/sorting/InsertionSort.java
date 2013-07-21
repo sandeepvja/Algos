@@ -1,6 +1,6 @@
 package com.sandeep.sorting;
 
-public class InsertionSort<T extends Comparable> implements Sortable<T> {
+public class InsertionSort<T extends Comparable<T>> implements Sortable<T> {
 
 	@Override
 	public void sort(T[] array) {
