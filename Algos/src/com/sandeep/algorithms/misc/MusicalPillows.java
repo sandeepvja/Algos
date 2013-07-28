@@ -39,7 +39,7 @@ public class MusicalPillows {
 				count++;
 				if(count == input2) {
 					map.put(i, i);
-					System.out.println("Eliminated: "+i);
+					//System.out.println("Eliminated: "+i);
 					eliminatedCount++;
 					count = 0;
 				}
@@ -57,7 +57,7 @@ public class MusicalPillows {
 		return returnVal;
     }
 	public static void main(String[] args) {
-		System.out.println(MusicalPillows.getWinner(5, 2));
+		System.out.println(MusicalPillows.getWinner(11, 4));
 	}
 
 }
